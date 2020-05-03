@@ -96,7 +96,7 @@ public class MyQuestions : MonoBehaviour
         for (int i = 0; i < question["answers"].Count; i++)
         {
             GameObject questionAnswer_tmp = GameObject.Instantiate(questionButtonPrefab, gridObject);
-            questionAnswer_tmp.transform.GetChild(0).GetComponent<TMP_Text>().text = question["answers"][i]["text"];
+            questionAnswer_tmp.transform.GetChild(1).GetComponent<TMP_Text>().text = question["answers"][i]["text"];
 
             float percentage = 0;
 
@@ -108,7 +108,7 @@ public class MyQuestions : MonoBehaviour
 
             int percentageint = Mathf.RoundToInt(percentage);
             string percentage_text = percentageint.ToString() + "%";
-            questionAnswer_tmp.transform.GetChild(1).GetComponent<TMP_Text>().text = percentage_text;
+            questionAnswer_tmp.transform.GetChild(2).GetComponent<TMP_Text>().text = percentage_text;
         }
     }
 }
