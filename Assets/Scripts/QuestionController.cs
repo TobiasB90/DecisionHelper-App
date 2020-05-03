@@ -16,6 +16,7 @@ public class QuestionController : MonoBehaviour
     public void Start()
     {
         StartCoroutine(CreateUser());
+        deviceId = SystemInfo.deviceUniqueIdentifier;
     }
 
     public void postQuestion()

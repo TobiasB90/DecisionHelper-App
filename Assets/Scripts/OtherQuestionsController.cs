@@ -21,6 +21,11 @@ public class OtherQuestionsController : MonoBehaviour
         StartCoroutine(GetQuestions());
     }
 
+    public void Start()
+    {
+        deviceId = SystemInfo.deviceUniqueIdentifier;
+    }
+
     IEnumerator GetQuestions()
     {
         //clear old ones

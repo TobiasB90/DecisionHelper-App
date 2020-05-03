@@ -18,6 +18,11 @@ public class MyQuestions : MonoBehaviour
         StartCoroutine(GetMyQuestions());
     }
 
+    public void Start()
+    {
+        deviceId = SystemInfo.deviceUniqueIdentifier;
+    }
+
     IEnumerator GetMyQuestions()
     {
         //clear old ones
