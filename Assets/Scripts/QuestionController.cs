@@ -14,9 +14,9 @@ public class QuestionController : MonoBehaviour
     public GameObject answerGrid;
 
     public void Start()
-    {
-        StartCoroutine(CreateUser());
+    {        
         deviceId = SystemInfo.deviceUniqueIdentifier;
+        StartCoroutine(CreateUser());
     }
 
     public void postQuestion()
